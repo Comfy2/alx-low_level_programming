@@ -1,21 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ * print_line - draws a straight line in the terminal
+ * @n: number of times the character _ should be printed
  */
-
-int main(void)
-
+void print_line(int n)
 {
-        int d;
+ if (n <= 0)
+ {
+ _putchar('\n');
+ } else
+ {
+ int i;
 
-        for (d = '0'; d <= '9'; d++)
-        putchar(d);
-        putchar('\n');
+ for (i = 1; i <= n; i++)
+ {
+ _putchar('_');
+ }
+ _putchar('\n');
+ }
 
-        return (0);
 }
 
