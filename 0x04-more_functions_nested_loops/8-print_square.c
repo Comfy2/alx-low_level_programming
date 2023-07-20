@@ -1,24 +1,26 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ * print_square - prints a square, followed by a new line;
+ * @size: size of the square
  */
-
-int main(void)
-
+void print_square(int size)
 {
-        int d;
-        char low;
+ if (size <= 0)
+ {
+ _putchar('\n');
+ } else
+ {
+ int i, j;
 
-        for (d = '0'; d <= '9'; d++)
-        putchar(d);
-
-        for (low = 'a'; low <= 'f'; low++)
-        putchar(low);
-        putchar('\n');
-
-        return (0);
+ for (i = 0; i < size; i++)
+ {
+ for (j = 0; j < size; j++)
+ {
+ _putchar('#');
+ }
+ _putchar('\n');
+ }
+ }
 }
+
